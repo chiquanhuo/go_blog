@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <p></p>
+    <table boder="1">
+        <tr>
+            <th>id</th>
+            <th>author</th>
+            <th>commit_id</th>
+            <th>filename</th>
+            <th>message</th>
+            <th>content</th>
+            <th>post_time</th>
+        </tr>
+    {{ range . }}
+        <tr>
+            <td> {{ .Id }}</td>
+            <td> {{ .Author }}</td>
+            <td> {{ .Commit_id }}</td>
+            <td> {{ .Filename }}</td>
+            <td> {{ .Message }}</td>
+            <td> {{ .Content }}</td>
+            <td> {{ .Post_time }}</td>
+        </tr>
+    {{ end }}
+    </table>
+</body>
+</html>
